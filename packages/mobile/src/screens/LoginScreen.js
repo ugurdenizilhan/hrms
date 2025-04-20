@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Image, KeyboardAvoidingView, Platform, ScrollView, Alert } from 'react-native';
 import { TextInput, Button, Text } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { firebaseAuthService } from '@hrms/common';
 
 const LoginScreen = ({ setIsAuthenticated }) => {
   const [email, setEmail] = useState('');
@@ -16,26 +17,38 @@ const LoginScreen = ({ setIsAuthenticated }) => {
 
     setIsLoading(true);
     try {
-      // Direkt mock doğrulama - API çağrısı yapmıyoruz
-      if (email === 'admin@example.com' && password === 'admin123') {
-        // Başarılı giriş
-        const mockToken = 'mock-jwt-token-12345';
+      // Firebase login denemesi
+      try {
+        // Firebase ile giriş dene
+        await firebaseAuthService.login(email, password);
+        // Başarılı olursa burada devam edecek
+        const mockToken = 'firebase-auth-token';
         await AsyncStorage.setItem('token', mockToken);
-        
-        // Mock user bilgilerini localStorage'a kaydedelim
-        const mockUser = {
-          id: 1,
-          firstName: 'Ahmet',
-          lastName: 'Yılmaz',
-          email: 'admin@example.com',
-          role: 'ADMIN'
-        };
-        await AsyncStorage.setItem('user', JSON.stringify(mockUser));
-        
         setIsAuthenticated(true);
-      } else {
-        // Başarısız giriş
-        Alert.alert('Giriş Hatası', 'Email veya şifre hatalı. Lütfen tekrar deneyin.');
+      } catch (firebaseError) {
+        console.log('Firebase login hatası, mock veri kullanılıyor:', firebaseError);
+        
+        // Firebase başarısız olursa mock login kullan
+        if (email === 'admin@example.com' && password === 'admin123') {
+          // Başarılı giriş
+          const mockToken = 'mock-jwt-token-12345';
+          await AsyncStorage.setItem('token', mockToken);
+          
+          // Mock user bilgilerini localStorage'a kaydedelim
+          const mockUser = {
+            id: 1,
+            firstName: 'Ahmet',
+            lastName: 'Yılmaz',
+            email: 'admin@example.com',
+            role: 'ADMIN'
+          };
+          await AsyncStorage.setItem('user', JSON.stringify(mockUser));
+          
+          setIsAuthenticated(true);
+        } else {
+          // Başarısız giriş
+          Alert.alert('Giriş Hatası', 'Email veya şifre hatalı. Lütfen tekrar deneyin.');
+        }
       }
     } catch (error) {
       console.error('Login error:', error);

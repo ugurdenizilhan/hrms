@@ -2,15 +2,17 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
+import { getAnalytics } from 'firebase/analytics';
 
 // Web uygulaması Firebase yapılandırması
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY || "AIzaSyYourAPIKey",
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN || "hrms-demo.firebaseapp.com",
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID || "hrms-demo",
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET || "hrms-demo.appspot.com",
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID || "123456789012",
-  appId: process.env.REACT_APP_FIREBASE_APP_ID || "1:123456789012:web:abc123def456"
+  apiKey: "AIzaSyB_NKP4zQdOYKLMPWEC-gwIx8zOo94-PEg",
+  authDomain: "hrms-project-75ffd.firebaseapp.com",
+  projectId: "hrms-project-75ffd",
+  storageBucket: "hrms-project-75ffd.firebasestorage.app",
+  messagingSenderId: "835599904319",
+  appId: "1:835599904319:web:0ac0212b7957e8a79ad28a",
+  measurementId: "G-2GHZ70CXLE"
 };
 
 // Firebase'i başlat
@@ -20,5 +22,6 @@ const firebaseApp = initializeApp(firebaseConfig);
 export const auth = getAuth(firebaseApp);
 export const db = getFirestore(firebaseApp);
 export const storage = getStorage(firebaseApp);
+export const analytics = typeof window !== 'undefined' ? getAnalytics(firebaseApp) : null;
 
 export default firebaseApp; 
