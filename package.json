@@ -6,8 +6,8 @@
     "packages/*"
   ],
   "scripts": {
-    "web": "yarn workspace @hrms/web start",
-    "mobile": "yarn workspace @hrms/mobile start",
+    "web": "npm run --prefix packages/web start",
+    "mobile": "npm run --prefix packages/mobile start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

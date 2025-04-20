@@ -30,17 +30,17 @@ export const setAuthToken = (token: string) => {
 export const authService = {
   login: async (email: string, password: string) => {
     try {
-      // Mock response for testing - mobil uygulama için gerçek API olmadan çalışır
+      // Mock response for testing - API bağlantı hatasını önlemek için sadece mock verileri döndür
       const mockUser = mockUsers.find(user => user.email === email && user.password === password);
       if (mockUser) {
+        console.log('Mock login başarılı:', mockUser);
         return { token: 'mock-jwt-token-12345', user: mockUser };
       }
       
-      // Gerçek API çağrısı - sunucu varsa çalışır
-      const response = await api.post('/auth/login', { email, password });
-      return response.data;
+      // Hatalı giriş durumunda
+      throw new Error('Geçersiz kullanıcı adı veya şifre');
     } catch (error) {
-      console.error('Mock auth service error', error);
+      console.error('Login hatası:', error);
       throw error;
     }
   },
