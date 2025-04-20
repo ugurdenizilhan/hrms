@@ -1,34 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { Provider as PaperProvider } from 'react-native-paper';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Provider as PaperProvider } from 'react-native-paper';
+import { StatusBar } from 'expo-status-bar';
 
-import { authService, setAuthToken } from '@hrms/common';
-import AuthNavigator from './src/navigation/AuthNavigator';
-import MainNavigator from './src/navigation/MainNavigator';
+// Screens
+import LoginScreen from './src/screens/LoginScreen';
 import LoadingScreen from './src/screens/LoadingScreen';
+import MainNavigator from './src/navigation/MainNavigator';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    // Check if user is already logged in
+    // Check if user is authenticated
     const checkAuth = async () => {
       try {
         const token = await AsyncStorage.getItem('token');
-        if (token) {
-          setAuthToken(token);
-          await authService.getCurrentUser();
-          setIsAuthenticated(true);
-        }
+        setIsAuthenticated(!!token);
+        setIsLoading(false);
       } catch (error) {
-        console.error('Authentication error:', error);
-        // Clear token on error
-        await AsyncStorage.removeItem('token');
-      } finally {
+        console.error('Error checking auth', error);
         setIsLoading(false);
       }
     };
@@ -41,17 +37,24 @@ export default function App() {
   }
 
   return (
-    <SafeAreaProvider>
-      <PaperProvider>
-        <NavigationContainer>
-          <StatusBar style="auto" />
+    <PaperProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
           {isAuthenticated ? (
-            <MainNavigator setIsAuthenticated={setIsAuthenticated} />
+            <Stack.Screen
+              name="Main"
+              options={{ headerShown: false }}
+            >
+              {props => <MainNavigator {...props} setIsAuthenticated={setIsAuthenticated} />}
+            </Stack.Screen>
           ) : (
-            <AuthNavigator setIsAuthenticated={setIsAuthenticated} />
+            <Stack.Screen name="Login" options={{ headerShown: false }}>
+              {props => <LoginScreen {...props} setIsAuthenticated={setIsAuthenticated} />}
+            </Stack.Screen>
           )}
-        </NavigationContainer>
-      </PaperProvider>
-    </SafeAreaProvider>
+        </Stack.Navigator>
+      </NavigationContainer>
+      <StatusBar style="auto" />
+    </PaperProvider>
   );
 } 

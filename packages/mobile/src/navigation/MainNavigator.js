@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialIcons } from '@expo/vector-icons';
 import { authService } from '@hrms/common';
 
-// Screens
+// Screens - Doğrudan screens klasöründen import edilmeli
 import DashboardScreen from '../screens/DashboardScreen';
 import EmployeesScreen from '../screens/EmployeesScreen';
 import DepartmentsScreen from '../screens/DepartmentsScreen';
