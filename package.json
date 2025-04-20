@@ -1,0 +1,21 @@
+{
+  "name": "hrms",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "web": "yarn workspace @hrms/web start",
+    "mobile": "yarn workspace @hrms/mobile start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hrms",
+    "react",
+    "react-native"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "Human Resources Management System for Web and Mobile"
+}
