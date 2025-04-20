@@ -28,6 +28,7 @@
     "web": {
       "favicon": "./src/assets/favicon.png"
     },
-    "newArchEnabled": true
+    "newArchEnabled": true,
+    "plugins": []
   }
 } 

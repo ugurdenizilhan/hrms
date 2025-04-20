@@ -20,5 +20,8 @@
   "description": "Human Resources Management System for Web and Mobile",
   "dependencies": {
     "firebase": "^11.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1"
   }
 }
