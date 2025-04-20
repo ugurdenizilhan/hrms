@@ -17,5 +17,8 @@
   ],
   "author": "",
   "license": "ISC",
-  "description": "Human Resources Management System for Web and Mobile"
+  "description": "Human Resources Management System for Web and Mobile",
+  "dependencies": {
+    "firebase": "^11.6.0"
+  }
 }
