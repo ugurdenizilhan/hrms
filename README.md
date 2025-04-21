@@ -1,6 +1,3 @@
-# HRMS - İnsan Kaynakları Yönetim Sistemi
-# Trigger deploy
-# Trigger deploy
-# Trigger deploy
-# Trigger deploy
-# Trigger deploy
+# HRMS Projesi
+
+Human Resources Management System
