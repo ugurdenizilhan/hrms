@@ -4,7 +4,11 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "buildCommand": "CI=false npm run build",
+        "outputDirectory": "build"
+      }
     }
   ],
   "routes": [
@@ -20,5 +24,8 @@
     "REACT_APP_FIREBASE_STORAGE_BUCKET": "@firebase-storage-bucket",
     "REACT_APP_FIREBASE_MESSAGING_SENDER_ID": "@firebase-messaging-sender-id",
     "REACT_APP_FIREBASE_APP_ID": "@firebase-app-id"
+  },
+  "github": {
+    "silent": true
   }
 } 

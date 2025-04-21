@@ -3,12 +3,12 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialIcons } from '@expo/vector-icons';
 import { authService } from '@hrms/common';
 
-// Doğrudan import
-import DashboardScreen from '../screens/DashboardScreen';
-import EmployeesScreen from '../screens/EmployeesScreen';
-import DepartmentsScreen from '../screens/DepartmentsScreen';
-import LeaveRequestsScreen from '../screens/LeaveRequestsScreen';
-import ProfileScreen from '../screens/ProfileScreen';
+// Doğrudan import - tam dosya yolları
+import DashboardScreen from '/Users/ugurdenizilhan/Desktop/Deneme/hrms/packages/mobile/src/screens/DashboardScreen.js';
+import EmployeesScreen from '/Users/ugurdenizilhan/Desktop/Deneme/hrms/packages/mobile/src/screens/EmployeesScreen.js';
+import DepartmentsScreen from '/Users/ugurdenizilhan/Desktop/Deneme/hrms/packages/mobile/src/screens/DepartmentsScreen.js';
+import LeaveRequestsScreen from '/Users/ugurdenizilhan/Desktop/Deneme/hrms/packages/mobile/src/screens/LeaveRequestsScreen.js';
+import ProfileScreen from '/Users/ugurdenizilhan/Desktop/Deneme/hrms/packages/mobile/src/screens/ProfileScreen.js';
 
 const Tab = createBottomTabNavigator();
 

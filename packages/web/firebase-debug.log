@@ -1,0 +1,77 @@
+[debug] [2025-04-20T19:13:44.513Z] ----------------------------------------------------------------------
+[debug] [2025-04-20T19:13:44.515Z] Command:       /usr/local/bin/node /Users/ugurdenizilhan/.npm-global/bin/firebase init
+[debug] [2025-04-20T19:13:44.516Z] CLI Version:   14.2.0
+[debug] [2025-04-20T19:13:44.516Z] Platform:      darwin
+[debug] [2025-04-20T19:13:44.516Z] Node Version:  v22.13.0
+[debug] [2025-04-20T19:13:44.516Z] Time:          Sun Apr 20 2025 22:13:44 GMT+0300 (GMT+03:00)
+[debug] [2025-04-20T19:13:44.516Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-20T19:13:44.521Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-20T19:13:44.521Z] > authorizing via signed-in user (ilhan@ugurdeniz.co)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/ugurdenizilhan/Desktop/Deneme/hrms/packages/web
+
+[debug] [2025-04-20T19:24:46.962Z] ----------------------------------------------------------------------
+[debug] [2025-04-20T19:24:46.964Z] Command:       /usr/local/bin/node /Users/ugurdenizilhan/.npm-global/bin/firebase init hosting
+[debug] [2025-04-20T19:24:46.964Z] CLI Version:   14.2.0
+[debug] [2025-04-20T19:24:46.964Z] Platform:      darwin
+[debug] [2025-04-20T19:24:46.964Z] Node Version:  v22.13.0
+[debug] [2025-04-20T19:24:46.964Z] Time:          Sun Apr 20 2025 22:24:46 GMT+0300 (GMT+03:00)
+[debug] [2025-04-20T19:24:46.964Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-20T19:24:46.969Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-20T19:24:46.969Z] > authorizing via signed-in user (ilhan@ugurdeniz.co)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/ugurdenizilhan/Desktop/Deneme/hrms/packages/web
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-04-20T19:26:25.366Z] ----------------------------------------------------------------------
+[debug] [2025-04-20T19:26:25.368Z] Command:       /usr/local/bin/node /Users/ugurdenizilhan/.npm-global/bin/firebase init hosting
+[debug] [2025-04-20T19:26:25.368Z] CLI Version:   14.2.0
+[debug] [2025-04-20T19:26:25.369Z] Platform:      darwin
+[debug] [2025-04-20T19:26:25.369Z] Node Version:  v22.13.0
+[debug] [2025-04-20T19:26:25.369Z] Time:          Sun Apr 20 2025 22:26:25 GMT+0300 (GMT+03:00)
+[debug] [2025-04-20T19:26:25.369Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-20T19:26:25.374Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-20T19:26:25.374Z] > authorizing via signed-in user (ilhan@ugurdeniz.co)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/ugurdenizilhan/Desktop/Deneme/hrms/packages/web
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
