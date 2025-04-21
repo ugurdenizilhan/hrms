@@ -18,12 +18,14 @@
     }
   ],
   "env": {
-    "REACT_APP_FIREBASE_API_KEY": "@firebase-api-key",
-    "REACT_APP_FIREBASE_AUTH_DOMAIN": "@firebase-auth-domain",
-    "REACT_APP_FIREBASE_PROJECT_ID": "@firebase-project-id",
-    "REACT_APP_FIREBASE_STORAGE_BUCKET": "@firebase-storage-bucket",
-    "REACT_APP_FIREBASE_MESSAGING_SENDER_ID": "@firebase-messaging-sender-id",
-    "REACT_APP_FIREBASE_APP_ID": "@firebase-app-id"
+    "REACT_APP_FIREBASE_API_KEY": "AIzaSyB_NKP4zQdOYKLMPWEC-gwIx8zOo94-PEg",
+    "REACT_APP_FIREBASE_AUTH_DOMAIN": "hrms-project-75ffd.firebaseapp.com",
+    "REACT_APP_FIREBASE_PROJECT_ID": "hrms-project-75ffd",
+    "REACT_APP_FIREBASE_STORAGE_BUCKET": "hrms-project-75ffd.firebasestorage.app",
+    "REACT_APP_FIREBASE_MESSAGING_SENDER_ID": "835599904319",
+    "REACT_APP_FIREBASE_APP_ID": "1:835599904319:web:0ac0212b7957e8a79ad28a",
+    "REACT_APP_FIREBASE_MEASUREMENT_ID": "G-2GHZ70CXLE",
+    "CI": "false"
   },
   "github": {
     "silent": true
